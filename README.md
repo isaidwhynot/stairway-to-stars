@@ -19,4 +19,4 @@ MAIL_PASSWORD = "email_password"
 ```
 
 If you change these appropriately, you are good to go.. Except the path of `chromedriver.exe` which you can set
-with `DRIVER_PATH" variable. Default assumes it's in the same directory with the script.
+with `DRIVER_PATH` variable. Default assumes it's in the same directory with the script.
