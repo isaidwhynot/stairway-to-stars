@@ -13,6 +13,8 @@ SRS_PASSWORD = "srs_password"
 MAIL_HANDLE = "your_mail_address_here"
 MAIL_PASSWORD = "email_password"
 
+DRIVER_PATH = "chromedriver"  # i.e. assume it's on the PATH
+
 def login_srs(explorer, id_, srs_password, mail_address, mail_pwd):
 	explorer.get(SRS_URL)
 
@@ -67,9 +69,7 @@ def read_from_mail(mail_address, password):
 	return code
 
 if __name__ == "__main__":
-	# The chrome driver is of version 81
-	driver_path = r"chromedriver.exe"
-	browser = webdriver.Chrome(executable_path=driver_path)
+	browser = webdriver.Chrome(executable_path=DRIVER_PATH)
 
 	login_srs(explorer=browser, id_=STUDENT_ID, srs_password=SRS_PASSWORD,
 				mail_address=MAIL_HANDLE, mail_pwd=MAIL_PASSWORD)
